@@ -19,6 +19,21 @@ app.use(morgan('dev'));
 //Enable the request from the client
 app.use(cors({
   origin: process.env.FRONT_END,
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "exposedHeaders": [
+    "Content-Length",
+    "Content-Range",
+    "Content-Disposition",
+    "Content-Type",
+  ],
+  "allowHeaders": [
+    "Content-Length",
+    "Content-Range",
+    "Content-Disposition",
+    "Content-Type",
+    "Authorization",
+  ],
+
 }));
 
 //Register the routers to API
