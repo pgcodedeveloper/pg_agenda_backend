@@ -18,7 +18,7 @@ app.use(morgan('dev'));
 
 //Enable the request from the client
 app.use(cors({
-  origin: process.env.FRONT_END,
+  origin: "*",
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
   "exposedHeaders": [
     "Content-Length",
